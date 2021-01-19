@@ -10,7 +10,7 @@ const routes: Routes = [
     component: FormEssentialsComponent,
     data: { title: 'Form Essentials'}
   },
-  { 
+  {
     path: 'tables',
     component: TablesComponent,
     data: { title: 'Tables'}
