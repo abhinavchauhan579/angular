@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.spacer {
+    flex: auto;
+  }
+
+.navbar {
+    justify-content: space-between;
+}
+
+.space-1rem {
+    padding-right: 1rem;
+}
+.space-2rem {
+    padding-right: 2rem;
+}
+.space-3rem {
+    padding-right: 3rem;
+}
+.space-4rem {
+    padding-right: 4rem;
+}
+.space-5rem {
+    padding-right: 5rem;
+}
