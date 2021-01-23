@@ -1,0 +1,50 @@
+<form [formGroup]="datepickersForm">
+    <mat-card class="margin-all card">
+        <mat-card-title class="centre">Date Picker</mat-card-title>
+        <mat-divider></mat-divider><br>
+        <div class="text-left margin"><span class="space-1rem"></span>Basic Datepicker</div>
+        <div class="margin-all div-border">
+            <mat-form-field appearance="standard">
+                <mat-label>Standard Appearance</mat-label>
+                <input matInput [matDatepicker]="picker1">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+            <span class="space-4rem"></span>
+            <mat-form-field appearance="legacy">
+                <mat-label>Leagcy Appearance</mat-label>
+                <input matInput [matDatepicker]="picker2">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Fill Appearance</mat-label>
+                <input matInput [matDatepicker]="picker3">
+                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                <mat-datepicker #picker3></mat-datepicker>
+            </mat-form-field>
+            <span class="space-2rem"></span>
+            <mat-form-field appearance="outline">
+                <mat-label>Outline Appearance</mat-label>
+                <input matInput [matDatepicker]="picker4" formControlName="currentDate">
+                <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                <mat-datepicker #picker4></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="text-left margin"><span class="space-1rem"></span>Datepicker with Date Range selection</div>
+        <div class="margin-all div-border">
+            <mat-form-field class="width-100" appearance="outline">
+                <mat-label>Select a Date Range</mat-label>
+                <mat-date-range-input [formGroup]="datepickersForm" [rangePicker]="rangePicker">
+                    <input matStartDate placeholder="Start date" formControlName="startDate">
+                    <input matEndDate placeholder="End date" formControlName="endDate">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>
+                <mat-date-range-picker #rangePicker></mat-date-range-picker>
+                <mat-error *ngIf="datepickersForm.controls['startDate'].invalid ||
+                datepickersForm.controls['endDate'].invalid">Select Start Date and End Date</mat-error>
+            </mat-form-field>
+        </div>
+    </mat-card>
+</form>

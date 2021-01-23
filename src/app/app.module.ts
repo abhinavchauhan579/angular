@@ -52,6 +52,17 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ButtonsComponent } from './form-components/buttons/buttons.component';
+import { SlidersComponent } from './form-components/sliders/sliders.component';
+import { CheckboxesComponent } from './form-components/checkboxes/checkboxes.component';
+import { DatepickersComponent } from './form-components/datepickers/datepickers.component';
+import { ChipsComponent } from './form-components/chips/chips.component';
+import { DropdownsComponent } from './form-components/dropdowns/dropdowns.component';
+import { ButtonTogglesComponent } from './form-components/button-toggles/button-toggles.component';
+import { TooltipsComponent } from './form-components/tooltips/tooltips.component';
+import { TextInputsComponent } from './form-components/text-inputs/text-inputs.component';
+import { StepperVerticalComponent } from './form-components/stepper-vertical/stepper-vertical.component';
+import { StepperHorizontalComponent } from './form-components/stepper-horizontal/stepper-horizontal.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +71,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FormEssentialsComponent,
     AlertsComponent,
-    TablesComponent
+    TablesComponent,
+    ButtonsComponent,
+    SlidersComponent,
+    CheckboxesComponent,
+    DatepickersComponent,
+    ChipsComponent,
+    DropdownsComponent,
+    ButtonTogglesComponent,
+    TooltipsComponent,
+    TextInputsComponent,
+    StepperVerticalComponent,
+    StepperHorizontalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,40 @@
+<mat-card class="margin-all card">
+    <mat-card-title class="centre">Stepper Form Style ( Vertical )</mat-card-title>
+    <mat-divider></mat-divider><br>
+    <div class="text-left margin"><span class="space-1rem"></span>Basic Vertical Stepper</div>
+    <div class="margin-all div-border">
+        <mat-vertical-stepper #stepper>
+            <mat-step label="Fill out your name">
+                <form [formGroup]="firstStepperForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Last name, First name" formControlName="name">
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+                </form>
+            </mat-step>
+            <mat-step label="Fill out your address">
+                <form [formGroup]="secondStepperForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <input matInput placeholder="Chor bazar, New York, NY" formControlName="address">
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+                </form>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                <p>You are now done.</p>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button (click)="stepper.reset()">Reset</button>
+                </div>
+            </mat-step>
+        </mat-vertical-stepper>
+    </div>
+</mat-card>

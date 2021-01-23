@@ -1,0 +1,33 @@
+<form [formGroup]="chipsForm">
+    <mat-card class="margin-all card">
+        <mat-card-title class="centre">Chips</mat-card-title>
+        <mat-divider></mat-divider><br>
+        <div class="text-left margin"><span class="space-1rem"></span>Basic Chips</div>
+        <div class="margin-all div-border">
+            <mat-chip-list>
+                <mat-chip>Chip One</mat-chip>
+                <mat-chip>Chip Two</mat-chip>
+                <mat-chip>Chip Three</mat-chip>
+                <mat-chip color="primary" selected>Primary Chip</mat-chip>
+                <mat-chip color="accent" selected>Accent Chip</mat-chip>
+            </mat-chip-list>
+        </div><br>
+        <div class="text-left margin"><span class="space-1rem"></span>Chips in Input fields</div>
+        <div class="margin-all div-border">
+            <mat-form-field class="width-100">
+                <mat-label>Favorite Languages</mat-label>
+                <mat-chip-list #chipList>
+                    <mat-chip *ngFor="let language of languageList" [selectable]="true"
+                        [removable]="true" (removed)="remove(language)" color="primary" selected>
+                        {{language.name}}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="You can Add new Languages..."
+                        [matChipInputFor]="chipList"
+                        [matChipInputAddOnBlur]="true"
+                        (matChipInputTokenEnd)="add($event)" class="width-100">
+                </mat-chip-list>
+            </mat-form-field>
+        </div><br>
+    </mat-card>
+</form>

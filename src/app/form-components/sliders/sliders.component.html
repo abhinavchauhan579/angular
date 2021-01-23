@@ -1,0 +1,21 @@
+<form [formGroup]="slidersForm">
+    <mat-card class="margin-all card">
+        <mat-card-title class="centre">Slider</mat-card-title>
+        <mat-divider></mat-divider><br>
+        <div class="text-left margin"><span class="space-1rem"></span>Basic Sliders in different colors</div>
+        <div class="margin-all div-border">
+            <mat-slider color="primary"></mat-slider>
+            <mat-slider color="accent"></mat-slider>
+            <mat-slider invert color="warn"></mat-slider>
+            <mat-slider disabled></mat-slider>
+        </div>
+        <div class="text-left margin"><span class="space-1rem"></span>Want a more interactive slider? Check this out!</div>
+        <div class="margin-all div-border">
+            <mat-slider class="width-100" tickInterval="10" thumbLabel="true" color="primary"></mat-slider>
+        </div>
+        <div class="text-left margin"><span class="space-1rem"></span>A slider with custom Range. Check this out!</div>
+        <div class="margin-all div-border">
+            <mat-slider class="width-100" thumbLabel="true" min="1" max="1000" color="warn"></mat-slider>
+        </div>
+    </mat-card>
+</form>

@@ -1,0 +1,27 @@
+<form [formGroup]="tooltipsForm">
+    <mat-card class="margin-all card">
+        <mat-card-title class="centre">Tooltip</mat-card-title>
+        <mat-divider></mat-divider><br>
+        <div class="text-left margin"><span class="space-1rem"></span>Basic Tooltip</div>
+        <div class="margin-all div-border">
+            <button mat-raised-button color="accent"
+                matTooltip="This is a tooltip. You can leave information here regarding the button.">
+                Hover over this button to see the Tooltip in action!
+            </button>
+        </div>
+        <div class="text-left margin"><span class="space-1rem"></span>Want Tooltip in a custom location?</div>
+        <div class="margin-all div-border">
+            <button mat-raised-button color="warn"
+                matTooltip="This is a custom position for tooltip!"
+                matTooltipPosition="after">
+                Custom Tooltip in action!
+            </button><span class="space-3rem"></span>
+            <button mat-mini-fab matTooltip="Delete!" color="primary"><mat-icon>delete</mat-icon>
+            </button><span class="space-3rem"></span>
+            <button mat-mini-fab matTooltip="Bookmark!" color="accent"><mat-icon>bookmark</mat-icon>
+            </button><span class="space-3rem"></span>
+            <button mat-mini-fab matTooltip="Home!" color="warn"><mat-icon>home</mat-icon>
+            </button><span class="space-3rem"></span>
+        </div>
+    </mat-card>
+</form>

@@ -1,0 +1,55 @@
+<mat-card class="margin-all card">
+    <mat-card-title class="centre">Stepper Form Style ( Horizontal )</mat-card-title>
+    <mat-divider></mat-divider><br>
+    <div class="text-left margin"><span class="space-1rem"></span>Horizontal Stepper with Error Messages</div>
+    <div class="margin-all div-border">
+        <mat-horizontal-stepper #horizontalStepper>
+            <mat-step label="Fill out your name" [stepControl]="firstStepperForm" errorMessage="Name is required.">
+                <form [formGroup]="firstStepperForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Last name, First name" formControlName="name">
+                </mat-form-field>
+                <div>
+                    <button mat-flat-button matStepperNext color="primary">Next</button>
+                </div>
+                </form>
+            </mat-step>
+            <mat-step label="Fill out your address" [stepControl]="secondStepperForm" errorMessage="Address is required.">
+                <form [formGroup]="secondStepperForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <input matInput placeholder="Chor bazar, New York, NY" formControlName="address">
+                </mat-form-field>
+                <div>
+                    <button mat-flat-button matStepperPrevious color="accent">Back</button>
+                    <span class="space-2rem"></span>
+                    <button mat-flat-button matStepperNext color="primary">Next</button>
+                </div>
+                </form>
+            </mat-step>
+            <mat-step label="Fill out your name" [stepControl]="thirdStepperForm" errorMessage="Phone Number is required.">
+                <form [formGroup]="thirdStepperForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput placeholder="10-Digits Maximum" formControlName="phoneNo" maxlength="10">
+                </mat-form-field>
+                <div>
+                    <button mat-flat-button matStepperPrevious color="accent">Back</button>
+                    <span class="space-2rem"></span>
+                    <button mat-flat-button matStepperNext color="primary">Next</button>
+                </div>
+                </form>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                <p>You are now done.</p>
+                <div>
+                    <button mat-flat-button matStepperPrevious color="accent">Back</button>
+                    <span class="space-2rem"></span>
+                    <button mat-flat-button color="warn" (click)="horizontalStepper.reset()">Reset</button>
+                </div>
+            </mat-step>
+        </mat-horizontal-stepper>
+    </div>
+</mat-card>

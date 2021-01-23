@@ -132,6 +132,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     column-count: 3;
 }
 
+.grid-1 {
+    display: grid;
+    grid-template-columns: auto;
+}
 .grid-2 {
     display: grid;
     grid-template-columns: auto auto;

@@ -1,0 +1,36 @@
+<form [formGroup]="buttonTogglesForm">
+    <mat-card class="margin-all card">
+        <mat-card-title class="centre">Button Toggles</mat-card-title>
+        <mat-divider></mat-divider><br>
+        <div class="text-left margin"><span class="space-1rem"></span>Button Toggles (Single Selection)</div>
+        <div class="margin-all div-border">
+            <mat-button-toggle-group name="fontStyle">
+                <mat-button-toggle value="bold">Blue</mat-button-toggle>
+                <mat-button-toggle value="italic">Red</mat-button-toggle>
+                <mat-button-toggle value="underline">Yellow</mat-button-toggle>
+                <mat-button-toggle value="underline">Green</mat-button-toggle>
+                <mat-button-toggle value="underline">Pink</mat-button-toggle>
+                <mat-button-toggle value="underline">Black</mat-button-toggle>
+                <mat-button-toggle value="underline">White</mat-button-toggle>
+                <mat-button-toggle value="underline">Brown</mat-button-toggle>
+                <mat-button-toggle value="underline">Orange</mat-button-toggle>
+                <mat-button-toggle value="underline">Indigo</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+        <div class="text-left margin"><span class="space-1rem"></span>Button Toggles (Multiple Selection)</div>
+        <div class="margin-all div-border">
+            <mat-button-toggle-group name="fontStyle" multiple="true">
+                <mat-button-toggle value="bold">Blue</mat-button-toggle>
+                <mat-button-toggle value="italic">Red</mat-button-toggle>
+                <mat-button-toggle value="underline">Yellow</mat-button-toggle>
+                <mat-button-toggle value="underline">Green</mat-button-toggle>
+                <mat-button-toggle value="underline">Pink</mat-button-toggle>
+                <mat-button-toggle value="underline">Black</mat-button-toggle>
+                <mat-button-toggle value="underline">White</mat-button-toggle>
+                <mat-button-toggle value="underline">Brown</mat-button-toggle>
+                <mat-button-toggle value="underline">Orange</mat-button-toggle>
+                <mat-button-toggle value="underline">Indigo</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div><br>
+    </mat-card>
+</form>

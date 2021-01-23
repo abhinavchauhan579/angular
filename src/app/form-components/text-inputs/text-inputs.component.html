@@ -1,0 +1,42 @@
+<form [formGroup]="textInputsForm">
+    <mat-card class="margin-all card">
+        <mat-card-title class="centre">Text Inputs</mat-card-title>
+        <mat-divider></mat-divider><br>
+        <div class="text-left margin"><span class="space-1rem"></span>Basic Text Inputs</div>
+        <div class="margin-all div-border">
+            <mat-form-field appearance="outline">
+                <mat-label>Outline Appearance</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <span class="space-2rem"></span>
+            <mat-form-field appearance="standard" class="width-40">
+                <mat-label>Standard Appearance</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </div>
+        <div class="text-left margin"><span class="space-1rem"></span>
+            Form fields with Error messages and Validations ( For Emails and Passwords )</div>
+        <div class="margin-all div-border">
+            <mat-form-field appearance="outline" class="width-40">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="name@example.com" formControlName="email" required>
+                <mat-icon matSuffix>email</mat-icon>
+                <mat-error *ngIf="textInputsForm.controls['email'].invalid">Required</mat-error>
+            </mat-form-field><span class="space-2rem"></span>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" required>
+                <button mat-icon-button matSuffix (click)="hide = !hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+        </div>
+        <div class="text-left margin"><span class="space-1rem"></span>Basic Text Area</div>
+        <div class="margin-all div-border">
+            <mat-form-field appearance="outline" class="width-100">
+                <mat-label>Leave Notes here</mat-label>
+                <textarea matInput>You can also resize this box.</textarea>
+            </mat-form-field>
+        </div>
+    </mat-card>
+</form>

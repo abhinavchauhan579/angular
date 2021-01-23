@@ -1,0 +1,66 @@
+<form [formGroup]="checkboxesForm">
+    <mat-card class="margin-all card">
+        <mat-card-title class="centre">Checkboxes</mat-card-title>
+        <mat-divider></mat-divider><br>
+        <div class="text-left"><span class="space-1rem"></span>Basic Checkboxes</div>
+        <div class="margin-all div-border">
+            <mat-checkbox color="primary">Check me!</mat-checkbox><span class="space-2rem"></span>
+            <mat-checkbox [checked]="true" color="warn">Uncheck me!</mat-checkbox><span class="space-2rem"></span>
+            <mat-checkbox [indeterminate]="true" color="primary">Indeterminate State!</mat-checkbox><span class="space-2rem"></span>
+            <mat-checkbox [disabled]="true">Disabled</mat-checkbox>
+        </div>
+        <div class="text-left div-padding">
+            Checkboxes are used when there are lists of options and the user 
+            may select any number of choices, including zero, one, or several. 
+            In other words, each checkbox is independent of all other checkboxes 
+            in the list, so checking one box doesn't uncheck the others.<br><br>
+            Introducing the indeterminate state, it will 
+            render as indeterminate regardless of the checked value. 
+            Any interaction with the checkbox by a user (i.e., clicking) 
+            will remove the indeterminate state.
+        </div>
+        <div class="margin-all div-border">
+            <div class="text-left"><span class="space-1rem"></span>Play with Checkboxes</div>
+            <div class="margin-all">
+                <mat-checkbox color="primary" formControlName="checkedCheckbox">Checked</mat-checkbox><span class="space-2rem"></span>
+                <mat-checkbox color="primary" formControlName="indeterminateCheckbox">Indeterminate</mat-checkbox><span class="space-2rem"></span>
+                <mat-checkbox color="primary" formControlName="disabledCheckbox">Disabled</mat-checkbox><span class="space-2rem"></span>
+            </div><br>
+            <div class="text-left"><span class="space-1rem"></span>Result</div>
+            <div class="margin-all">
+                <mat-checkbox color="warn" formControlName="resultCheckbox"
+                    [checked]="this.checkedState"
+                    [indeterminate]="this.indeterminateState"
+                    [disabled]="this.disabledState">See me Changing</mat-checkbox>
+            </div>
+        </div><br>
+        <div class="text-left"><span class="space-1rem"></span>Basic Radio Buttons</div>
+        <div class="margin-all div-border">
+            <mat-radio-group>
+                <mat-radio-button value="1">Default</mat-radio-button><span class="space-2rem"></span>
+                <mat-radio-button color="primary" value="2">Primary</mat-radio-button><span class="space-2rem"></span>
+                <mat-radio-button color="accent" value="3">Accent</mat-radio-button><span class="space-2rem"></span>
+                <mat-radio-button color="warn" value="4">Warn</mat-radio-button><span class="space-2rem"></span>
+                <mat-radio-button disabled value="5">Disabled</mat-radio-button><span class="space-2rem"></span>
+              </mat-radio-group>
+        </div>
+        <div class="text-left div-padding">
+            Radio buttons are used when there is a list of two or more options 
+            that are mutually exclusive and the user must select exactly one choice. 
+            In other words, clicking a non-selected radio button will deselect 
+            whatever other button was previously selected in the list.
+        </div><br>
+        <div class="text-left"><span class="space-1rem"></span>Toggle Buttons</div>
+        <div class="margin-all div-border">
+            <mat-slide-toggle color="primary">Click me!</mat-slide-toggle><span class="space-2rem"></span>
+            <mat-slide-toggle color="accent">Click me!</mat-slide-toggle><span class="space-2rem"></span>
+            <mat-slide-toggle color="warn">Click me!</mat-slide-toggle><span class="space-2rem"></span>
+            <mat-slide-toggle disabled>Disabled</mat-slide-toggle><span class="space-2rem"></span>
+        </div>
+        <div class="text-left div-padding">
+            If you want something more special than checkboxes, we have Toggle buttons.<br>
+            Toggle buttons are basically on/off switches. They prompt users to choose 
+            between two mutually exclusive options.
+        </div><br>
+    </mat-card>
+</form>
