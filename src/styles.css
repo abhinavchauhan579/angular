@@ -163,3 +163,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .div-padding {
     padding: 10px 10px 10px 10px;
 }
+
+.back-image {
+    height: 100%;
+    background-image: url(assets/images/angular-purple.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
